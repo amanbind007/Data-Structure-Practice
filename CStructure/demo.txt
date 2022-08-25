@@ -1,0 +1,4 @@
+Hello world. It contains Data Science, Machine Learning, and Deep Learning.
+Deep Learning is the technology that enables computers to learn without being explicitly programmed.
+Machine Learning is the technology that enables computers to learn without being explicitly programmed.
+Data Science is the technology that enables computers to learn without being explicitly programmed. 
