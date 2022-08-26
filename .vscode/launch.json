@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ZigZagArray",
+      "request": "launch",
+      "mainClass": "ZigZagArray",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
       "name": "Launch NumberToWord",
       "request": "launch",
       "mainClass": "NumberToWord",

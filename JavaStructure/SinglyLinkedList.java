@@ -1,4 +1,4 @@
-
+import org.w3c.dom.Node;
 
 public class SinglyLinkedList {
     public ListNode head;
@@ -35,23 +35,46 @@ public class SinglyLinkedList {
     }
 
     public <T> void insertAtFirst(T num) {
-        ListNode newNode = new ListNode("Aman");
+        ListNode newNode = new ListNode(num);
         newNode.next = head;
         head = newNode;
     }
 
     public <T> void insertAtLast(T num) {
-        if(head == null){
-            ListNode newNode = new ListNode("Bind");
+        if (head == null) {
+            ListNode newNode = new ListNode(num);
             head = newNode;
-        }
-        else{
+        } else {
             ListNode curListNode = head;
-            while(curListNode.next != null){
+            while (curListNode.next != null) {
                 curListNode = curListNode.next;
             }
-            ListNode newNode = new ListNode("Bind");
+            ListNode newNode = new ListNode(num);
             curListNode.next = newNode;
+        }
+
+    }
+
+    public <T> void insertAtPosition(int pos, T num) {
+        if (pos > length() + 1) {
+            System.exit(192);
+        } else {
+            if (pos == length() + 1) {
+                insertAtLast(num);
+            } else if (pos == 1) {
+                insertAtFirst(num);
+            } else {
+                ListNode temp = head;
+                int i = 1;
+                while (i < pos-1) {
+                    temp = temp.next;
+                    i++;
+                }
+                ListNode newNode = new ListNode<T>(num);
+                newNode.next = temp.next;
+                temp.next = newNode;
+
+            }
         }
 
     }
@@ -72,35 +95,33 @@ public class SinglyLinkedList {
         // head -> 10 -> 13 -> 100 -> 45 -> null
         System.out.println("=============================");
         sll.display();
-
+        
         System.out.println("=============================");
         System.out.println("Lenght of linked list is " + sll.length());
 
         System.out.println("=============================");
         sll.insertAtFirst("Aman");
         sll.display();
-
-        System.out.println("=============================");
         System.out.println("NewList Empty is created");
         SinglyLinkedList newList = new SinglyLinkedList();
-
-        System.out.println("=============================");
         newList.insertAtFirst("Aman");
         newList.display();
 
         System.out.println("=============================");
         sll.insertAtLast("Bind");
         sll.display();
-
-        System.out.println("=============================");
         System.out.println("NewList Empty is created");
         SinglyLinkedList newNewList = new SinglyLinkedList();
-
-
-        System.out.println("=============================");
         newNewList.insertAtLast("Bind");
         newNewList.display();
 
+        System.out.println("=============================");
+        sll.insertAtPosition(1, "Kumar");
+        sll.display();
+        sll.insertAtPosition(6, "Kumar");
+        sll.display();
+        sll.insertAtPosition(9, "kumar");
+        sll.display();
         System.out.println("=============================");
 
     }
