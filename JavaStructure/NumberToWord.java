@@ -2,9 +2,8 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * NumberToWord
- */
+//Number to Word
+
 public class NumberToWord {
 
     public static String upto2(char arr[]) {
@@ -12,7 +11,7 @@ public class NumberToWord {
         String[] twosDigit = { "", "eleven", "twelve", "thirteen", "forteen", "fifteen", "sixteen", "seventeen",
                 "eighteen", "nineteen" };
         String[] t_s = { "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninty" };
-        String[] multiplier = { "hundred", "thousand" };
+        // String[] multiplier = { "hundred", "thousand" };
 
         int len = arr.length;
         if (len == 0) {
@@ -44,7 +43,7 @@ public class NumberToWord {
         String[] twosDigit = { "", "eleven", "twelve", "thirteen", "forteen", "fifteen", "sixteen", "seventeen",
                 "eighteen", "nineteen" };
         String[] t_s = { "ten", "twenty", "thirty", "fourty", "fifty", "sixty", "seventy", "eighty", "ninty" };
-        String[] multiplier = { "hundred", "thousand" };
+        // String[] multiplier = { "hundred", "thousand" };
 
         int len = arr.length;
         if (len == 0) {
@@ -67,13 +66,13 @@ public class NumberToWord {
             int snum = Integer.parseInt(Character.toString(arr[len - 1]));
             return t_s[fnum - 1] + " " + onesDigit[snum];
         }
-        if(len < 3){
+        if (len < 3) {
             upto2(arr);
         }
-        if (len == 3){
-            char newarr[] = arr;
+        if (len == 3) {
+            // char newarr[] = arr;
             int fnum = Integer.parseInt(Character.toString(arr[0]));
-            return onesDigit[fnum] + " hundred " +upto2(Arrays.copyOfRange(arr,1,3));
+            return onesDigit[fnum] + " hundred " + upto2(Arrays.copyOfRange(arr, 1, 3));
         }
 
         return "hello";
