@@ -6,6 +6,7 @@ public class ASCII {
         char ch = sc.next().charAt(0);
         int n = ch;
         System.out.println(n);
+        sc.close();
 
     }
     

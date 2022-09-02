@@ -6,6 +6,55 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch EvenOddIndex",
+      "request": "launch",
+      "mainClass": "EvenOddIndex",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch leadGame",
+      "request": "launch",
+      "mainClass": "leadGame",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch prog",
+      "request": "launch",
+      "mainClass": "prog",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch multipleOfThree",
+      "request": "launch",
+      "mainClass": "multipleOfThree",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch Problem",
+      "request": "launch",
+      "mainClass": "Problem",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch AreaCoveredbyPlanes",
+      "request": "launch",
+      "mainClass": "AreaCoveredbyPlanes",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
+      "name": "Launch stud",
+      "request": "launch",
+      "mainClass": "stud",
+      "projectName": "dataStructure_630c77ef"
+    },
+    {
+      "type": "java",
       "name": "Launch ZigZagArray",
       "request": "launch",
       "mainClass": "ZigZagArray",

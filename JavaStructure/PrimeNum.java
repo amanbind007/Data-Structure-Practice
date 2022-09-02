@@ -71,7 +71,7 @@ public class PrimeNum {
         System.out.print("Is it a prime number : " + isPrime(447796));
 
         System.out.println("\n============================================================");
-        primeForQuantity(20);
+        primeForQuantity(200000);
 
         System.out.println("\n============================================================");
         primeForRange(71);
