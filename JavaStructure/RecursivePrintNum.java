@@ -18,7 +18,6 @@ import java.util.Scanner;
 // Sample Output 2 :
 // 1 2 3 4
 
-
 public class RecursivePrintNum {
 
     public static int printInt(int n, int startNum){
