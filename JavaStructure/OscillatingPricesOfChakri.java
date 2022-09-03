@@ -24,12 +24,29 @@ import java.util.Scanner;
 // Sample Output 0:
 // 8
 
-
 public class OscillatingPricesOfChakri {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        
-        
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        int maxProfit = 0;
+        for (int i = 0; i < n; i++) {
+            int maxCheck =0;
+            for (int j = i + 1; j < n; j++) {
+                if (arr[i] < arr[j]) {
+                    maxCheck= arr[j]-arr[i];
+                    if(maxCheck>maxProfit){
+                        maxProfit = maxCheck;
+                    }
+                } 
+            }
+        }
+        System.out.println(maxProfit);
+        sc.close();
+
     }
-    
+
 }
