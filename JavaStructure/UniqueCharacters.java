@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class Main {
+public class UniqueCharacters {
     public static void main(String args[]) {
         // hashmap
         HashMap<String,String> hm = new HashMap<String, String>();

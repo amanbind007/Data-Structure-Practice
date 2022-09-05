@@ -1,6 +1,7 @@
 
 import java.util.Scanner;
-
+import java.util.stream.IntStream;
+import java.lang.Math;
 
 //K-Concatenation
 
@@ -47,6 +48,34 @@ import java.util.Scanner;
 
 public class K_Concatenation {
 
+    public static int kadanes(int arr[], int n) {
+        int current_sum = 0;
+        int best_sum = Integer.MIN_VALUE;
+        for (int i = 0; i < n; i++) {
+            current_sum += arr[i];
+            best_sum = Math.max(current_sum, best_sum);
+            if (current_sum < 0) {
+                current_sum = 0;
+            }
+            
+        }
+        return best_sum;
+    }
+
+    public static int kadanes2(int A[], int N, int K) {
+        int newArr[] = new int[N * 2];
+        for (int i = 0; i < N; i++) {
+            newArr[i] = A[i];
+            newArr[N+i] = A[i];
+        }
+        // for(int j = 0; j<newArr.length; j++){
+        //     System.out.print(newArr[j]+" ");
+        // }
+        int sum = kadanes(newArr, N * 2);
+        return sum;
+
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -56,27 +85,26 @@ public class K_Concatenation {
             int N = sc.nextInt();
             int K = sc.nextInt();
             int A[] = new int[N];
+            int totalSum = 0;
             for (int j = 0; j < N; j++) {
                 A[j] = sc.nextInt();
+                totalSum += A[j];
+            }
+            if (K == 1) {
+                int kadanesSum = kadanes(A, N);
+                max[i] = kadanesSum;
+            }
+            if (totalSum < 0) {
+                int kadanes2 = kadanes2(A, N, K);
+                max[i] = kadanes2;
+            }
+            if(totalSum>=0){
+                int kadanes2 = kadanes2(A, N, K) + (K-2)*(totalSum);
+                max[i] = kadanes2;
             }
 
-            int current_sum = 0;
-            int best_sum = 0;
-            
-            for(int j = 0; j<N*K; j++){
-                current_sum+=A[(j%N)];
-                if(current_sum<0){
-
-                    current_sum = 0;
-                }
-                if(current_sum>=best_sum){
-                    best_sum = current_sum;
-                }
-            }
-            max[i] = best_sum;
-            
         }
-        for(int i=0; i<t; i++){
+        for (int i = 0; i < t; i++) {
             System.out.println(max[i]);
         }
 
