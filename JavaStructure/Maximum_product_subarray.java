@@ -1,5 +1,5 @@
-import java.util.*;
-import java.lang.*;
+import java.util.Scanner;
+
 
 // Maximum Product Subarray
 
@@ -34,33 +34,30 @@ import java.lang.*;
 
 public class Maximum_product_subarray {
 
-    public static int maxProdSubArray(int arr[], int n) {
-
-        int max_current_sum = 1;
-        int min_current_sum = 1;
-        int max_sum = 0;
-        for (int i = 0; i < n; i++) {
-            if (arr[i] < 0) {
-                int temp = min_current_sum;
-                min_current_sum = Math.min(1, min_current_sum*arr[i]);
-                max_current_sum  = Math.max(1, temp*arr[i]);
-            }
-            if (arr[i] > 0) {
-                max_current_sum *= arr[i];
-                min_current_sum = Math.max(1, max_current_sum);
-                
-            }
-            if (arr[i] == 0) {
-                max_current_sum = 0;
-                min_current_sum = 0;
-            }
-            if(max_sum<max_current_sum){
-                max_sum = max_current_sum;
-            }
-        }
+    public static int maxProduct(int[] nums) {
         
-
-        return max_sum;
+        int n = nums.length;
+        int current_max = 1;
+        int current_min = 1;
+        int maxx = 0;
+        for(int i = 0; i<n; i++){
+            if(nums[i]>0){
+                current_max *= nums[i];
+                current_min = Math.min(1, current_min*nums[i]);
+            }
+            else if(nums[i]==0){
+                current_min = 1;
+                current_max = 1;
+            }
+            else{
+                int temp = current_max;
+                current_max = Math.max(1, current_min*nums[i]);
+                current_min = temp*nums[i];
+            }
+            maxx = Math.max(current_max,maxx);
+        }
+        return maxx;
+             
     }
 
     public static void main(String[] args) {
@@ -71,7 +68,7 @@ public class Maximum_product_subarray {
             arr[i] = sc.nextInt();
         }
 
-        int max = maxProdSubArray(arr, n);
+        int max = maxProduct(arr);
         System.out.println("Max: " + max);
         sc.close();
 
