@@ -1,8 +1,7 @@
 package JavaCollections;
 
-import java.util.ArrayList;
 import java.lang.Object;
-import java.util.PriorityQueue;
+
 
 public class Need_Of_Java_Collections {
     public static void main(String[] args) {
