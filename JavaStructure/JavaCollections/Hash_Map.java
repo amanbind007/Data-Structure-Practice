@@ -13,7 +13,7 @@ public class Hash_Map {
         mp.put("Deepak", 4);
         mp.put("Farhan", 5);
         mp.put("Hardik", 6);
-        mp.put("Idrak", 7);
+        mp.put("Idrak", 7); 
         mp.put("Ishaan", 8);
         mp.put("Sahu", 9);
         mp.put("Sanskar", 10);
