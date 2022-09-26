@@ -1,4 +1,6 @@
-Hello world. It contains Data Science, Machine Learning, and Deep Learning.
-Deep Learning is the technology that enables computers to learn without being explicitly programmed.
-Machine Learning is the technology that enables computers to learn without being explicitly programmed.
-Data Science is the technology that enables computers to learn without being explicitly programmed. 
+Name - Aman Bind
+Roll Number - 191))BTCSEMA05472
+Class - B.tech CSE(MA)
+Section - K
+Year/Sem - 4th Year/7th Semester
+Subject - Compiler Design

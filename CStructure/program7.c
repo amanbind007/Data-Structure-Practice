@@ -106,10 +106,8 @@ char* subString(char* str, int left, int right)
 }
  
 // Parsing the input STRING.
-int parse(char* str)
+void parse(char* str)
 {
-
-    int count = 0;
     int left = 0, right = 0;
     int len = strlen(str);
  
@@ -119,35 +117,34 @@ int parse(char* str)
  
         if (isDelimiter(str[right]) == true && left == right) {
             if (isOperator(str[right]) == true)
-                count++;
+                printf("'%c' IS AN OPERATOR\n", str[right]);
  
             right++;
             left = right;
         } else if (isDelimiter(str[right]) == true && left != right
                    || (right == len && left != right)) {
             char* subStr = subString(str, left, right - 1);
-            
  
             if (isKeyword(subStr) == true)
-                count++;
+                printf("'%s' IS A KEYWORD\n", subStr);
  
             else if (isInteger(subStr) == true)
-                count++;
+                printf("'%s' IS AN INTEGER\n", subStr);
  
             else if (isRealNumber(subStr) == true)
-                count++;
+                printf("'%s' IS A REAL NUMBER\n", subStr);
  
             else if (validIdentifier(subStr) == true
                      && isDelimiter(str[right - 1]) == false)
-                count++;
+                printf("'%s' IS A VALID IDENTIFIER\n", subStr);
  
             else if (validIdentifier(subStr) == false
                      && isDelimiter(str[right - 1]) == false)
-                count++;
+                printf("'%s' IS NOT A VALID IDENTIFIER\n", subStr);
             left = right;
         }
     }
-    return count;
+    return;
 }
  
 // DRIVER FUNCTION
@@ -156,8 +153,7 @@ int main()
      // maximum length of string is 100 here
     char str[100] = "int a = b + 1c";
  
-    int total_Tokens = parse(str); // calling the parse function
-
-    printf("Total Tokens are: %d", total_Tokens);
+    parse(str); // calling the parse function
+ 
     return (0);
 }

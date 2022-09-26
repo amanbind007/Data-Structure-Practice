@@ -7,7 +7,7 @@ int main()
     FILE *ptr;
     char ch;
 
-    ptr = fopen("program1.c", "r");
+    ptr = fopen("demo.txt", "r");
     if (ptr == NULL)
     {
         printf("Error!");

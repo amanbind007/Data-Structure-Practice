@@ -1,0 +1,12 @@
+
+
+int main(){
+    int i = 100;
+
+    while(i--){
+        printf(i);
+    }
+
+    printf("Hello, World");
+    return 0;
+}
