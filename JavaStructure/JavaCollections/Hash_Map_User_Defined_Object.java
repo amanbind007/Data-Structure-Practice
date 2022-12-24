@@ -2,7 +2,7 @@ package JavaCollections;
 
 import java.util.HashMap;
 import java.util.Map;
-import JavaCollections.Student;
+
 
 public class Hash_Map_User_Defined_Object {
     public static void main(String[] args) {

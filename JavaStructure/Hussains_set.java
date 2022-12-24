@@ -1,10 +1,7 @@
 import java.util.Scanner;
-import java.util.stream.IntStream;
-import java.util.Queue;
-import java.util.PriorityQueue;
-import java.lang.Math;
-import java.util.Collections;
 import java.util.Arrays;
+import java.util.PriorityQueue;
+import java.util.Queue;
 
 // https://www.codechef.com/problems/COOK82C
 
@@ -79,40 +76,40 @@ import java.util.Arrays;
 
 // The value being divided on the eight move is 1. Hence the last output is 1.
 
-// public class Hussains_set {
+class Main{
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        
+        long[] arr = new long[N];
+        
+        for(int i = 0; i<N; i++){
+            arr[i] = sc.nextLong();
+        }
+        
+        PriorityQueue<Long> queue = new PriorityQueue<Long>();
 
-//     public static int calc(int qi, int[] numSet){
-//         Queue<Integer> que = new PriorityQueue<>();
-//         for(int i = 0; i< qi; i++){
-//             if(que.peek() > numSet[numSet.length]){
-//                 int n = que.poll()/2;
-//                 if(n != 0){
-//                     que.add(n);
-//                 }
-//             }
-//         }
-//         int result = Math.max(que.peek(), Collections.max(Arrays.asList(numSet)));
-//         return result;
-//     }
+        Arrays.sort(arr);
+        int count = 0;
+        int end_p = N-1;
 
-//     public static void main(String[] args) {
-//         Scanner sc = new Scanner(System.in);
-//         int N = sc.nextInt();
-//         int M = sc.nextInt();
+        while(M>0){
+            int currQuest = sc.nextInt();
+            if(count<currQuest){
+                long num = arr[end_p];
+                end_p--;
 
-//         int[] numSet = new int[N];
-//         Arrays.sort(numSet);
 
-//         for (int i = 0; i < N; i++) {
-//             numSet[i] = sc.nextInt();
-//         }
+            }
+            
 
-//         for (int i = 0; i < M; i++) {
-//             int Qi = sc.nextInt();
-//             int result = calc(Qi, numSet);
-//             System.out.println(result);
-//         }
-//         sc.close();
-//     }
+        }
 
-// }
+
+
+        sc.close();
+
+    }
+}

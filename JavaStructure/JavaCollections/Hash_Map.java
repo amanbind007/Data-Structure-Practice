@@ -33,6 +33,7 @@ public class Hash_Map {
         System.out.println(mp);
 
 
+
         //getting values from Hash Map
         System.out.println(mp.get("Aman Bind"));
 
