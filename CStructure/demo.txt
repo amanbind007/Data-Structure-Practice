@@ -1,6 +1,6 @@
-Name - Aman Bind
-Roll Number - 191))BTCSEMA05472
-Class - B.tech CSE(MA)
-Section - K
-Year/Sem - 4th Year/7th Semester
-Subject - Compiler Design
+$ hadoop fs -cat output_dir/part-00000 
+
+1981    34 
+1984    40 
+1985    45
+

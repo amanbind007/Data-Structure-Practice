@@ -10,6 +10,7 @@ import java.util.Collection;
 public class Hash_Map {
     public static void main(String[] args) {
         Map<String,Integer> mp = new HashMap<>();
+        
 
         //Putting values in Hash Map
         mp.put("Aman", 1);
@@ -30,8 +31,11 @@ public class Hash_Map {
         mp.put("Trisha", 11);
         mp.put("Kashish", 12);
 
+        
+
         System.out.println(mp);
 
+        mp.ke
 
 
         //getting values from Hash Map
